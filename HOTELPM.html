@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>hotelpuertomadryn.com</title>
+    <link rel="stylesheet" href="styles/kendo.common.min.css" />
+    <link rel="stylesheet" href="styles/kendo.default.min.css" />
+    <link rel="stylesheet" href="styles/kendo.default.mobile.min.css" />
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/kendo.all.min.js"></script>
+    <script src="Proyecto01/js/jquery.min.js"></script>
+    <script src="Proyecto01/js/kendo.all.min.js"></script>
+</head>
+<header id="header-primary">
+    <a href="HOTELPM.html" class="logo">
+        <figure>
+            <img src="img/PM.png" alt="">
+        </figure>
+    </a>
+<body bgcolor="#90EE90">
+</body> 
+<h2> <center>HOTEL PUERTO MADRYN </center> </h2>
+<br> <h4> <center> Un lugar ideal en el que encontrará paz, tranquilidad y armonia</center></h4> </br>
+<br>
+<section class="block-home">
+    <div>
+        <h2 style="padding-top: 5rem; font-size: 30px;font-weight: 300;text-transform: uppercase;"></h2>
+    </div>
+    <div id="example">
+        <div style="margin:auto; width:100%; padding-top: 2rem; display: flex; justify-content: center;">
+            <div id="scrollView" style="width: 1022px; height: 515px; max-width: 100%;">
+                <div class="photo photo1" data-role="page">
+                    <h2 style="color: rgba(245, 245, 245, 0.5); font-weight: 400;"></h2>
+                </div><div class="photo photo2" data-role="page">
+                    <h2 style="color: rgba(245, 245, 245, 0.5); font-weight: 400;"></h2>
+                </div><div class="photo photo3" data-role="page">
+                    <h2 style="color: rgba(0, 0, 0, 0.5); font-weight: 400;"></h2>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function() {
+                $("#scrollView").kendoScrollView({
+                    enablePager: true,
+                    contentHeight: "100%"
+                });
+            });
+        </script>
+        <style>
+    
+    
+            #scrollview-home .photo {
+                display: inline-block;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                }
+    
+            .photo1 {
+                background-image: url("img/hot1.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+    
+            .photo2 {
+                background-image: url("img/hot2.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+    
+            .photo3 {
+                background-image: url("img/hot3.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        </style>
+  <br><center><a href="menus.html"><button type="button" class="btn btn-success">VER HABITACIONES</button></a></center></br>
+  <br><center><a href="reserva.html"><button type="button" class="btn btn-success">REALIZAR RESERVA</button></a></center></br>
+  <br><center><a href="index.html"><button type="button" class="btn btn-success">NUESTRO PERSONAL</button></a></center></br>
+  <br><center><a href="menues.html"><button type="button" class="btn btn-success">NUESTRO MENU</button></a></center></br>
+</div>
+<div id="example">
+				<div class="demo-section k-content" style="text-align: center;">
+             <h4>Consulte el calendario</h4>
+             <div id="calendar"></div>
+        </div>
+            <script>
+                $(document).ready(function() {
+                    // create Calendar from div HTML element
+                    $("#calendar").kendoCalendar();
+                });
+            </script>
+        </div>
+        <iframe src="https://www.meteoblue.com/es/tiempo/widget/daily/puerto-madryn_argentina_3840092?geoloc=fixed&days=4&tempunit=CELSIUS&windunit=KILOMETER_PER_HOUR&precipunit=MILLIMETER&coloured=coloured&pictoicon=0&pictoicon=1&maxtemperature=0&maxtemperature=1&mintemperature=0&mintemperature=1&windspeed=0&windspeed=1&windgust=0&winddirection=0&winddirection=1&uv=0&humidity=0&precipitation=0&precipitation=1&precipitationprobability=0&precipitationprobability=1&spot=0&spot=1&pressure=0&layout=light"  frameborder="0" scrolling="NO" allowtransparency="true" sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox" style="width: 216px; height: 363px"></iframe><div><!-- DO NOT REMOVE THIS LINK --><a href="https://www.meteoblue.com/es/tiempo/semana/buenos-aires_argentina_3435910?utm_source=weather_widget&utm_medium=linkus&utm_content=daily&utm_campaign=Weather%2BWidget" target="_blank">meteoblue</a></div>
+</br>
+
+        </div>
+    </div>
+<div id="example">
+    <div class="demo-section k-content wide" style="max-width: 644px;">
+        <div id="mediaplayer" style="height:360px"></div>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("#mediaplayer").kendoMediaPlayer({
+                autoPlay: true,
+                navigatable: true,
+                media: {
+                    title: "Observe lo mejor de Puerto Madryn !!!!",
+                    source: "https://www.youtube.com/watch?v=RgBq_t8olTA"
+                }
+            });
+        });
+    </script>
+  </section>  
+  <div class="map"> 
+  <h3>Ubicación</h3> 
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2927.659386795242!2d-65.01700988452988!3d-42.79555007916004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbe03caa876c96c27%3A0x486b931f212e9de5!2sJulio%20Argentino%20Roca%202150%2C%20Puerto%20Madryn%2C%20Chubut!5e0!3m2!1ses!2sar!4v1600966838221!5m2!1ses!2sar" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+  </div> 
+  </main> 
+  <footer id="footer-primary"> 
+  <nav id="nav-footer"> 
+  <ul> 
+  <h5>Hotel Puerto Madryn</h5> 
+  </ul> 
+  </nav> 
+  <div id="redes-sociales"> 
+  <a href="http://www.facebook.com" class="icon-social" target="_blank">F</a> 
+  
+  <a href="http://www.instagram.com" class="icon-social" target="_blank">I</a> 
+  
+  <a href="http://www.linkedin.com" class="icon-social" target="_blank">L</a> 
+  
+  <a href="http://www.twitter.com" class="icon-social" target="_blank">T</a> 
+  
+  </div> 
+  <address> 
+  <h5>Contacto</h5> 
+  <ul> 
+  <li>Julio Argentino Roca 2150, Puerto Madryn, Chubut, Argentina.</li> 
+  <li>hotelpm@gmail.com</li> 
+  <li>+54 9 280 3171888</li> 
+  </ul> 
+  </address> 
+  </footer> 
+</script>
+</html>
