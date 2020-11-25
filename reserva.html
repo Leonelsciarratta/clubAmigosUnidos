@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>hotelpuertomadryn.com</title>
+    <link rel="stylesheet" href="styles/kendo.common.min.css" />
+    <link rel="stylesheet" href="styles/kendo.default.min.css" />
+    <link rel="stylesheet" href="styles/kendo.default.mobile.min.css" />
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/kendo.all.min.js"></script>
+    <script src="Proyecto01/js/jquery.min.js"></script>
+    <script src="Proyecto01/js/kendo.all.min.js"></script>
+    <base href="https://demos.telerik.com/kendo-ui/calendar/disable-dates">
+    <style>html { font-size: 14px; font-family: Arial, Helvetica, sans-serif; }</style>
+    <title></title>
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2020.3.1021/styles/kendo.default-v2.min.css" />
+
+    <script src="https://kendo.cdn.telerik.com/2020.3.1021/js/jquery.min.js"></script>
+    
+    
+    <script src="https://kendo.cdn.telerik.com/2020.3.1021/js/kendo.all.min.js"></script>
+
+</head>
+<header id="header-primary">
+    <a href="HOTELPM.html" class="logo">
+        <figure>
+            <img src="img/PM.png" alt="">
+        </figure>
+    </a>
+
+<body><center>
+<body bgcolor="#90EE90">
+  <div id="example">
+    <div class="demo-section k-content" style="text-align: center;">
+      
+
+        <h4 style="margin-top:1em">Fechas para reservar</h4>
+        <div id="national-holidays"></div>
+    </div>
+    <script>
+      $(document).ready(function() {
+          $("#weekend-calendar").kendoCalendar({
+              disableDates: ["sa", "su"]
+          });
+
+          $("#national-holidays").kendoCalendar({
+              value: new Date("11/04/2020"),
+              dates: [
+               
+                new Date("9/7/2020"),
+                new Date("10/12/2020"),
+                new Date("11/11/2020"),
+                new Date("11/26/2020"),
+                new Date("11/27/2020"),
+                new Date("12/25/2020")
+              ],
+              disableDates: function (date) {
+                  var dates = $("#national-holidays").data("kendoCalendar").options.dates;
+                  if (date && compareDates(date, dates)) {
+                      return true;
+                  } else {
+                      return false;
+                  }
+              }
+          });
+
+          function compareDates(date, dates) {
+              for (var i = 0; i < dates.length; i++) {
+                  if (dates[i].getDate() == date.getDate() &&
+                      dates[i].getMonth() == date.getMonth() &&
+                      dates[i].getYear() == date.getYear()) {
+                    return true
+                  }
+              }
+          }
+      });
+    </script>
+</div>
+
+
+ <h1><b>HOTEL PUERTO MADRYN </b></h1>
+ <h4><b>Complete el siguiente formulario </b></h4>
+ <FORM method="get" action="procesa.php"/>
+   <label for="nombre">Nombre</label>
+   <input type="text" id="Nombre" name="Nombre" required/> <br/>
+   <label for="apellido">Apellido</label>
+   <input type="text" id="apellido" name="apellido" required/> <br/>
+   <label for="correo electronico">Correo Electronico</label>
+   <input type="text" id="correo electronico" name="correo electronico" required/> <br/>
+   <label for="Fecha en la que desea realizar su reserva"/label>Fecha de la reserva</label>
+   <input type="text" id="Fecha de Reserva" name="Fecha de Reserva"required/> <br/>
+   <label for="cantidad de personas">Cantidad de personas</label>
+   <input type="text" id="cant.de personas" name="Cantidad de Personas"required/> <br/>
+   <label for="Habitacion que desea reservar">Habitacion que desea reservar</label>
+   <input type="text" id="habitacionreserva" name="Habitacion que desea reservar"required/> <br/>
+   <label for="enviar"</label>
+   <input type="submit" value="enviar"/>
+  <!-- Start your project here-->
+  <div style="height: 50vh">
+    <div class="flex-center flex-column">
+
+      <h1 class="EMPERADOR ARGENTINO"
+        style=width:250px; height: 90px;">
+    </h1>  
+    </div>
+  </div>
+  <!-- /Start your project here-->
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  </center>
+</body>
+
+</html>

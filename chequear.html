@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>hotelpuertomadryn.com</title>
+  <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2020.2.617/styles/kendo.common.min.css" />
+  <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2020.2.617/styles/kendo.default.min.css" />
+  <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2020.2.617/styles/kendo.default.mobile.min.css" />
+  <script src="Proyecto01/js/jquery.min.js"></script>
+  <script src="Proyecto01/js/kendo.all.min.js"></script>
+  <script src="Proyecto01/js/jquery-3.5.1.js"></script>
+  <body>
+        
+		<script>
+           $.getJSON( "Proyecto01/estado.json", function( data ) {
+            var items = [];
+            var estado = "";
+            $.each( data, function( key, val ) {
+            items.push( "<li id='" + key + "'>" + val + "</li>" );
+                if (val=="Construccion") {
+                    estado = "Construccion";
+                }
+            });
+       
+            if (estado == "Construccion")
+            {
+                $( "<img src='img/construccion.jpg'>" ).appendTo( "body" );
+
+            }
+            else
+            {
+                $( "<a href src='empleados.html'></a>Nuestros Empleados" ).appendTo( "body" );
+            }
+            });
+
+		</script>  
+		
+
+	
+	</div>
+</body>

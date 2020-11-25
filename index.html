@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Julio Guillermo D&iacuteaz</title>
+  <meta name="author" content="Julio Diaz">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+ 
+  <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2020.2.617/styles/kendo.common.min.css" />
+  <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2020.2.617/styles/kendo.default.min.css" />
+  <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2020.2.617/styles/kendo.default.mobile.min.css" />
+  <script src="https://kendo.cdn.telerik.com/2020.2.617/js/jquery.min.js"></script>
+  <script src="https://kendo.cdn.telerik.com/2020.2.617/js/kendo.all.min.js"></script>
+ </head>
+
+<body>
+        
+		<script>
+           $.getJSON( "ajax/estado.json", function( data ) {
+            var items = [];
+            var estado = "";
+            $.each( data, function( key, val ) {
+            items.push( "<li id='" + key + "'>" + val + "</li>" );
+                if (val=="EN-CONSTRUCCION") {
+                    estado = "EN-CONSTRUCCION";
+                }
+            });
+       
+            if (estado == "EN-CONSTRUCCION")
+            {
+                $( "<img src='img/construccion.jpg'>" ).appendTo( "body" );
+
+            }
+            else
+            {
+                $( "<a href='empleados.html'> INGRESAR </a>" ).appendTo( "body" );
+            }
+            });
+
+		</script>  
+	
+</body>
+</html>

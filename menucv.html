@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="styles/kendo.common.min.css" />
+    <link rel="stylesheet" href="styles/kendo.default.min.css" />
+    <link rel="stylesheet" href="styles/kendo.default.mobile.min.css" />
+
+    <script src="js/jquery.min.js"></script>
+    
+    
+    <script src="js/kendo.all.min.js"></script>
+    
+    
+
+</head>
+<body>
+<center><H2>GRACIAS POR VISITAR MI PERFIL</H2></center>
+    <div id="example">
+        <div id="megaStore">
+            <ul id="menu">
+                
+                <li>
+                    Ver CV
+                    <a href="curriculum.html"><button type="button" class="btn btn-success"></button></a>  
+                </li>
+                <li>
+                    Ver Linkedin
+                    <a href="https://www.linkedin.com/in/leonel-sciarratta-411431165/"><button type="button" class="btn btn-success"></button></a>  
+                </li>
+                <li>
+                    Ver Padlet
+                    <a href="https://padlet.com/leonelsciarratta1/s980yqh9evqr"><button type="button" class="btn btn-success"></button></a>  
+                </li>
+            </ul>
+            <style>
+                #megaStore {
+                    max-width: 300px;
+                    margin: 30px auto;
+                    padding-top: 120px;
+                    background: url('../content/web/menu/header.jpg') no-repeat center 0;
+                }
+                #menu h2 {
+                    font-size: 1em;
+                    text-transform: uppercase;
+                    padding: 5px 10px;
+                }
+                #template img {
+                    margin: 5px 20px 0 0;
+                    float: left;
+                }
+                #template {
+                    width: 380px;
+                }
+                #template ol {
+                    float: left;
+                    margin: 0 0 0 30px;
+                    padding: 10px 10px 0 10px;
+                }
+                #template:after {
+                    content: ".";
+                    display: block;
+                    height: 0;
+                    clear: both;
+                    visibility: hidden;
+                }
+                #template .k-button {
+                    float: left;
+                    clear: left;
+                    margin: 5px 0 5px 12px;
+                }
+            </style>
+            <script>
+                $(document).ready(function() {
+                    $("#menu").kendoMenu();
+                });
+            </script>
+        </div>
+        </div>
+
+</body>
+</html>

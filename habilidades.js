@@ -1,0 +1,20 @@
+var habilidades = [
+    {    hab : "Relevamiento y Análisis de datos y formularios"},
+    {    hab : "Capacidad para definir requisitos funcionales y no funcionales del sistema"},
+    {    hab : "Desarrollo Front End"},
+    {    hab : "Generación de diseños de alta calidad"},
+    {    hab : "Tareas de Testing Funcional"},
+    {    hab : "Capacidad para realizar Casos de Uso"},
+    {    hab : "Conocimientos avanzados en Word y Excel"},
+    {    hab : "Comprensión y análisis del Negocio"},
+    {    hab : "Armado de Presupuesto y Conocimiento de las Estrategias de Negocio"},
+    {    hab : "Capacidad para crear manuales y capacitar usuarios"},
+    {    hab : "Herramientas UML"},
+    {    hab : "Conocimiento en diagramas de actividades, diagrama de estado y diagrama de Clases"},
+    {    hab : "Programación web"},
+    {    hab : "Base de datos relacionales"},
+    {    hab : "Seguridad de los sistemas"},
+    {    hab : "Conocimiento en marketing digital y facebook ads"},
+    {    hab : "Conocimiento avanzado en Wordpress"},
+]
+        
