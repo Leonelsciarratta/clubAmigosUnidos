@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>clubamigosunidos.com</title>
+    <link rel="stylesheet" href="styles/kendo.common.min.css" />
+    <link rel="stylesheet" href="styles/kendo.default.min.css" />
+    <link rel="stylesheet" href="styles/kendo.default.mobile.min.css" />
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/kendo.all.min.js"></script>
+</head>
+<header id="header-primary">
+    <a href="index.html" class="logo">
+        <figure>
+            <img src="img/port.png" alt="">
+        </figure>
+    </a>
+<body background="img/pantalla.jpg">
+</body> 
+<h2> <center>CLUB AMIGOS UNIDOS </center> </h2>
+<br> <h4> <center> UN CLUB EN CONSTANTE CRECIMIENTO GRACIAS AL APOYO DE SUS HINCHAS Y SUS SOCIOS</center></h4> </br>
+<br>
+
+ <div id="example">
+    <div id="megaStore">
+        <ul id="menu">
+		 <h2 style="padding-top: 1rem; font-size: 50px;font-weight: 400;text-transform: uppercase;"></h2>
+		
+            <li>
+                Nuestra Historia
+                
+                        <a href="historia.html"><button type="button" class="btn btn-success"></button></a>
+                    
+                    
+            <li>
+                Sumate a nuestro equipo
+                <a href="inscripcionjugadores.html"><button type="button" class="btn btn-success"></button></a>
+            </li>
+            <li>
+            
+            </li>
+            <li>
+                Hacete socio
+                <a href="inscripcionsocios.html"><button type="button" class="btn btn-success"></button></a>
+            </li>
+            <li>
+                Plantel
+				<ul>
+                    <li>
+                        Jugadores
+                        <a href="jugadores.html"><button type="button" class="btn btn-success"></button></a>
+                    </li>
+                    <li>
+                        Estadisticas
+                        <a href="estadisticas.html"><button type="button" class="btn btn-success"></button></a>        
+                    </li>
+                </ul>
+            <li>
+                Títulos
+                <a href="titulos.html"><button type="button" class="btn btn-success"></button></a>
+            </li>
+			<li>
+                Tienda
+                <a href="tienda.html"><button type="button" class="btn btn-success"></button></a>
+            </li>
+    </div>
+    <style>
+        #megaStore {
+            max-width: 600px;
+            margin: 30px auto;
+            padding-top: 120px;
+            background: url('../content/web/menu/header.jpg') no-repeat center 0;
+        }
+        #menu h2 {
+            font-size: 1em;
+            text-transform: uppercase;
+            padding: 5px 10px;
+        }
+        #template img {
+            margin: 5px 20px 0 0;
+            float: left;
+        }
+        #template {
+            width: 380px;
+        }
+        #template ol {
+            float: left;
+            margin: 0 0 0 30px;
+            padding: 10px 10px 0 10px;
+        }
+        #template:after {
+            content: ".";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+        #template .k-button {
+            float: left;
+            clear: left;
+            margin: 5px 0 5px 12px;
+        }{
+    </style>
+    <script>
+        $(document).ready(function() {
+            $("#menu").kendoMenu();
+        });
+    </script>
+</div>
+</div>
+
+<body>
+    
+        
+        <figure>
+		
+		    <a href="https://mpago.la/1oYZ9ZE" class="imagen">
+            <img src="img/ooo m.jpg" alt="">
+			<a href="index.html"><button type="button" class="btn btn-success">COMPRAR</button></a>
+			<a href="index.html" class="imagen">
+            <img src="img/jjj.jpg" alt="">
+			<a href="index.html"><button type="button" class="btn btn-success">COMPRAR</button></a>
+			<a href="index.html" class="imagen">
+            <img src="img/ui.jpg" alt="">
+			<a href="index.html"><button type="button" class="btn btn-success">COMPRAR</button></a>	
+        </figure>
+		
+  
+</body>
+    
+</div>
+  </main> 
+  <footer id="footer-primary"> 
+  <nav id="nav-footer"> 
+  <ul> 
+  <h5>Club Amigos Unidos</h5> 
+  </ul> 
+  </nav> 
+  <address> 
+  <h5>Contacto</h5> 
+  <div id="example" class="k-content">
+    <div class="qr-wrapper">
+        <div class="demo-section">
+            <h3>E-mail</h3>
+            <div id="qrMail"></div>
+        </div>
+        <div class="demo-section">
+            <h3>Telephone</h3>
+            <div id="qrTelephone"></div>
+        </div>
+        <div class="demo-section">
+            <h3>Ubicacion</h3>
+            <div id="qrGeoLocation"></div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("#qrMail").kendoQRCode({
+                value: "mailto:leonelsciarratta1@gmail.com",
+                size: 120,
+                color: "#e15613",
+                background: "transparent"
+            });
+
+            $("#qrTelephone").kendoQRCode({
+                value: "tel:https://wa.me/3413470217",
+                errorCorrection: "Q",
+                size: 120,
+                color: "#67a814",
+                border: {
+                    color: "#67a814",
+                    width: 5
+                }
+            });
+
+            $("#qrGeoLocation").kendoQRCode({
+                value: "geo:42.65049,23.37925,100",
+                errorCorrection: "H",
+                size: 120,
+                color: "#166a83"
+            });
+        });
+
+    </script>
+
+    <style>
+        .demo-section {
+            display: inline-block;
+            margin: 15px 30px 15px 0;
+        }
+
+        .k-qrcode {
+            display: inline-block;
+            margin: 10px 0 0;
+            border: none;
+        }
+    </style>
+</div>
+
+</section>
+  <ul> 
+  <li>Pellegrini 2150, Rosario, Santa Fe, Argentina.</li> 
+  <li>amigosunidos@gmail.com</li> 
+  <li>+54 9 341 3470217</li> 
+  </ul> 
+  </address> 
+  </footer> 
+</script>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="styles/kendo.common.min.css" />
+    <link rel="stylesheet" href="styles/kendo.default.min.css" />
+    <link rel="stylesheet" href="styles/kendo.default.mobile.min.css" />
+
+    <script src="js/jquery.min.js"></script>
+    
+    
+    <script src="js/kendo.all.min.js"></script>
+    
+    
+
+</head>
+<body>
+    
+    <div id="example">
+    <div class="configurator">
+        <div class="header">Club Amigos Unidos</div>
+        <div class="box-col">
+            <CENTER><h4>Compra la nueva indumentaria!!!!!</h4></CENTER>
+           
+    <div id="window">
+        <div style="text-align: center;">
+            <img src="img/jjj.jpg" alt="ARNE JACOBSEN EGG CHAIR" />
+            <p>CAMISETA TEMPORADA 2020/2021<br /> COMPRELA YA: <a href="tienda.html" title="">Visite nuestra tienda</a></p>
+        </div>
+    </div>
+
+    <span id="undo" style="display:none" class="k-button hidden-on-narrow">Haga click.</span>
+
+    <div class="responsive-message"></div>
+
+    <script>
+        function onClose() {
+            $("#undo").fadeIn();
+        }
+
+        $(document).ready(function () {
+            var original = $("#window").clone(true);
+
+            $(".box-col input").change(function () {
+                var clone = original.clone(true);
+
+                $("#undo").hide();
+                $("#window").data("kendoWindow").destroy();
+
+                setTimeout(function () {
+                    $("#example").append(clone);
+                    initWindow();
+                }, 200);
+            });
+
+            var getEffects = function () {
+                return (($("#expand")[0].checked ? "expand:vertical " : "") +
+                    ($("#opacity")[0].checked ? "fadeIn" : "")) || false;
+            };
+
+            function initWindow() {
+                var isDraggable = $("#draggable")[0].checked;
+                var isResizable = $("#resizable")[0].checked;
+
+                var windowOptions = {
+                    actions: ["Custom", "Minimize", "Maximize", "Close"],
+                    draggable: isDraggable,
+                    resizable: isResizable,
+                    width: "500px",
+                    title: "NUEVA CAMISETA",
+                    visible: false,
+                    close: onClose
+                };
+
+                if (!$("#default")[0].checked)
+                    windowOptions.animation = { open: { effects: getEffects() }, close: { effects: getEffects(), reverse: true } };
+
+                $("#window").kendoWindow(windowOptions);
+
+                $("#undo")
+                    .bind("click", function () {
+                        $("#window").data("kendoWindow").open();
+                        $("#undo").fadeOut(300);
+                    });
+
+                $("#window").data("kendoWindow").open();
+            }
+
+            initWindow();
+
+            $("#window").data("kendoWindow").wrapper
+                .find(".k-i-custom").parent().click(function (e) {
+                    alert("Custom action button clicked");
+                    e.preventDefault();
+                });
+        });
+    </script>
+
+    <style>
+
+        #example {
+            min-height: 400px;
+        }
+
+        #undo {
+            text-align: center;
+            position: absolute;
+            white-space: nowrap;
+            padding: 1em;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 1023px) {
+            div.k-window {
+                display: none !important;
+            }
+        }
+    </style>
+
+</div>
+
+
+    
+
+</body>
+</html>

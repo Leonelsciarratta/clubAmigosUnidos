@@ -1,0 +1,17 @@
+{
+    "id": "123456789-jxOV430go9fx2e",
+    "email": "test@test.com",
+    ...
+    "default_card": "1490022319978",
+    "default_address": null,
+    "cards": [{
+        "id": "1490022319978",
+        "expiration_month": 12,
+        "expiration_year": 2020,
+        "first_six_digits": "415231",
+        "last_four_digits": "0001",
+        ...
+    }],
+    "addresses": [],
+    "live_mode": false
+}
